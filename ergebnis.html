@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ergebnis</title>
+</head>
+<body>
+  <h1>Ergebnis des Deutsch-Stereotypen Fragebogens</h1>
+  <p>Vielen Dank für die Teilnahme am Fragebogen! Hier ist dein Ergebnis:</p>
+  
+  <script>
+    function auswerten() {
+      // Holen der Antworten aus dem Formular
+      const form = document.getElementById('fragebogenForm');
+      const answers = new FormData(form);
+  
+      // Zähle die Antworten für jede Option
+      const counts = {
+        a: 0,
+        b: 0,
+        c: 0,
+        d: 0
+      };
+  
+      for (const answer of answers.values()) {
+        counts[answer]++;
+      }
+  
+      // Bestimme das Ergebnis basierend auf den gezählten Antworten
+      let ergebnis = '';
+  
+      if (counts.a >= 3) {
+        ergebnis = "Herzlichen Glückwunsch, du erfüllst viele typisch deutsche Stereotypen! Pünktlichkeit, Ordnung und deutsche Küche sind dir wichtig.";
+      } else if (counts.b >= 3) {
+        ergebnis = "Du zeigst einige deutsche Eigenschaften, bist aber auch offen für andere Kulturen und Ansichten.";
+      } else if (counts.c >= 3) {
+        ergebnis = "Du bist nicht besonders stereotypisch deutsch, sondern eher ein freigeistiger Individualist.";
+      } else {
+        ergebnis = "Du entsprichst so gar nicht dem Klischee des 'typischen Deutschen', aber das ist auch völlig in Ordnung!";
+      }
+  
+      // Zeige das Ergebnis an
+      document.getElementById('ergebnis').innerHTML = "<h2>Ergebnis:</h2><p>" + ergebnis + "</p>";
+    }
+  </script>
+  
+</body>
+</html>
