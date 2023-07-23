@@ -2,7 +2,60 @@
 <html>
 
 <head>
-    <title>Deutsch-Stereotypen Fragebogen</title>
+    <title>Bist du ein Almann?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            display: block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #ergebnis {
+            margin-top: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,54 +67,61 @@
         <input type="radio" name="frage1" value="b"> Schnitzel mit Kartoffelsalat<br>
         <input type="radio" name="frage1" value="c"> Pizza<br>
         <input type="radio" name="frage1" value="d"> Döner Kebab<br>
-        
+
         <!-- Frage 2 -->
         <p>Frage 2: Es regnet. Wie reagierst du?</p>
         <input type="radio" name="frage2" value="a"> Ich schnappe mir meinen Regenschirm und ziehe eine wasserfeste
         Jacke an.<br>
         <input type="radio" name="frage2" value="b"> Ich bleibe drinnen und lese ein Buch.<br>
-        <input type="radio" name="frage2" value="c"> Ich tanze im Regen, es macht mir nichts aus.<br>
+        <input type="radio" name="frage2" value="c"> Ich ignoriere dass es regnet, ich bin doch nicht aus Zucker.<br>
         <input type="radio" name="frage2" value="d"> Ich beschwere mich über das schlechte Wetter und fluche.<br>
 
         <!-- Frage 3 -->
         <p>Frage 3: Wie pünktlich bist du normalerweise?</p>
         <input type="radio" name="frage3" value="a"> Immer 5 Minuten zu früh.<br>
-        <input type="radio" name="frage3" value="b"> Meistens pünktlich, aber manchmal ein paar Minuten zu spät.<br>
+        <input type="radio" name="frage3" value="b"> Ich bin so pünktlich wie die deutsche Bahn.<br>
         <input type="radio" name="frage3" value="c"> Pünktlichkeit ist nicht so wichtig für mich.<br>
         <input type="radio" name="frage3" value="d"> Ich bin oft etwas zu spät dran.<br>
 
         <!-- Frage 4 -->
-        <p>Frage 4: Welche dieser Aussagen trifft am ehesten auf dich zu?</p>
-        <input type="radio" name="frage4" value="a"> Ich stehe früh auf, um den Tag effizient zu nutzen.<br>
-        <input type="radio" name="frage4" value="b"> Ich mache mir oft Gedanken über die Regeln und Vorschriften.<br>
-        <input type="radio" name="frage4" value="c"> Ich liebe es, in meiner Freizeit die Natur zu erkunden.<br>
-        <input type="radio" name="frage4" value="d"> Ich nehme mir gerne Zeit für ausgiebige Mahlzeiten und genieße das Essen.<br>
+        <p>Frage 4: Hast du Birkenstock Sandalen?</p>
+        <input type="radio" name="frage4" value="a"> Ja, aber nur mit Socken.<br>
+        <input type="radio" name="frage4" value="b"> Ja.<br>
+        <input type="radio" name="frage4" value="c"> Schonmal getragen, aber bin eher der Flip-Flop-Typ.<br>
+        <input type="radio" name="frage4" value="d"> Nein, weder Interesse, noch probiert.<br>
 
         <!-- Frage 5 -->
         <p>Frage 5: Wie stehst du zu bürokratischen Verfahren?</p>
         <input type="radio" name="frage5" value="a"> Ich erledige alles ordnungsgemäß und genau nach Vorschrift.<br>
-        <input type="radio" name="frage5" value="b"> Ich finde sie manchmal nervig, aber ich halte mich größtenteils daran.<br>
-        <input type="radio" name="frage5" value="c"> Es ist mir nicht besonders wichtig, ich mache mir darüber nicht so viele Gedanken.<br>
-        <input type="radio" name="frage5" value="d"> Bürokratie frustriert mich, und ich versuche sie so gut wie möglich zu umgehen.<br>
+        <input type="radio" name="frage5" value="b"> Ich finde sie manchmal nervig, aber ich halte mich größtenteils
+        daran.<br>
+        <input type="radio" name="frage5" value="c"> Es ist mir nicht besonders wichtig, ich mache mir darüber nicht so
+        viele Gedanken.<br>
+        <input type="radio" name="frage5" value="d"> Bürokratie frustriert mich, und ich versuche sie so gut wie möglich
+        zu umgehen.<br>
 
         <!-- Frage 6 -->
         <p>Frage 6: Wie oft trinkst du Bier?</p>
         <input type="radio" name="frage6" value="a"> Regelmäßig, es ist ein fester Bestandteil meiner Kultur.<br>
         <input type="radio" name="frage6" value="b"> Ab und zu, aber ich trinke auch andere Getränke.<br>
-        <input type="radio" name="frage6" value="c"> Ich trinke selten Alkohol, und wenn, dann lieber Wein oder Cocktails.<br>
+        <input type="radio" name="frage6" value="c"> Ich trinke selten Alkohol, und wenn, dann lieber Wein oder
+        Cocktails.<br>
         <input type="radio" name="frage6" value="d"> Ich mag kein Bier und trinke es fast nie.<br>
 
         <!-- Frage 7 -->
         <p>Frage 7: Wie wichtig ist dir Recycling und Umweltschutz?</p>
-        <input type="radio" name="frage7" value="a"> Sehr wichtig, ich trenne meinen Müll sorgfältig und achte auf Nachhaltigkeit.<br>
+        <input type="radio" name="frage7" value="a"> Sehr wichtig, ich trenne meinen Müll sorgfältig und achte auf
+        Nachhaltigkeit.<br>
         <input type="radio" name="frage7" value="b"> Es ist mir schon wichtig, aber ich bin nicht fanatisch.<br>
-        <input type="radio" name="frage7" value="c"> Es ist mir nicht besonders wichtig, ich mache mir darüber nicht so viele Gedanken.<br>
+        <input type="radio" name="frage7" value="c"> Es ist mir nicht besonders wichtig, ich mache mir darüber nicht so
+        viele Gedanken.<br>
         <input type="radio" name="frage7" value="d"> Recycling ist Zeitverschwendung, meiner Meinung nach.<br>
 
         <!-- Frage 8 -->
         <p>Frage 8: Wie oft machst du Urlaub?</p>
         <input type="radio" name="frage8" value="a"> Einmal im Jahr, meistens in Deutschland oder einem Nachbarland.<br>
-        <input type="radio" name="frage8" value="b"> Zwei- bis dreimal im Jahr, ich reise gerne in verschiedene Länder.<br>
+        <input type="radio" name="frage8" value="b"> Zwei- bis dreimal im Jahr, ich reise gerne in verschiedene
+        Länder.<br>
         <input type="radio" name="frage8" value="c"> Selten, ich bevorzuge es, zu Hause zu bleiben.<br>
         <input type="radio" name="frage8" value="d"> Ich mache überhaupt keinen Urlaub.<br>
 
